@@ -6,10 +6,14 @@ const TabularComponent = ({ value }) => {
   const { ['4. close']: close } = value
   const { ['2. high']: high } = value
   const { ['5. volume']: volume } = value
-  console.log(open, 'open')
-  console.log(value, 'working')
+  const { keys } = value
+  console.log(keys, 'key')
+
   return (
     <div className='container'>
+      <div className='column'>
+        <h4>{keys}</h4>
+      </div>
       <div className='column'>
         <h4>{open}</h4>
       </div>
